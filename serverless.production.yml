@@ -1,0 +1,3 @@
+account-id: ${cf:${self:service}-infra.AccountId}
+
+bucket-pages-gen-name: ${cf:${self:service}-infra.TableFunnelArn}

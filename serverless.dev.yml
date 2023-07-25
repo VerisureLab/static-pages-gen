@@ -1,0 +1,6 @@
+account-id: '*'
+
+bucket-pages-gen-name: pages-gen
+bucket-landing-gen-name: pages-landing
+cdn-base-url: https://dfiy9wdndpbb.cloudfront.net/
+site-url: https://antifurto.verisure.it

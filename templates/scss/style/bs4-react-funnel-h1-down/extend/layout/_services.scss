@@ -1,0 +1,29 @@
+.service-list {
+  list-style-image: url(/img/icons/arrow-right.png);
+
+  li {
+    margin-top: 10px;
+    padding-left: 6px;
+  }
+}
+
+@media(max-width: 768px) {
+  #service-2 {
+    border-bottom: 1px solid rgba(000, 0, 0, .1);
+    border-top: 1px solid rgba(000, 0, 0, .1);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  ul.service-list {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+  ul.service-list {
+    width: 95%;
+  }
+}

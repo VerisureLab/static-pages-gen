@@ -1,0 +1,19 @@
+<div class="element-card-row element_<%= element.id %><%= element.isHighlight ? ' background-lighter' : '' %>">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-9 col-sm-12">
+                <div class="element-text text-center">
+                    <h2><%= element.title %></h2>
+                    <%- element.isHtml ? element.description : '<p class="lead">' + element.description + '</p>' %>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-10 text-center">
+                <picture>
+                    <source type="image/webp" srcSet="<%= process.env.CDN_BASE_URL %><%= element.image.variants.web.fileName %>" />
+                    <source srcSet="<%= process.env.CDN_BASE_URL %><%= element.image.variants.legacy.fileName %>" />
+                    <img class="img-fluid mx-auto <%= element.imageClass %>" loading="lazy" alt="<%= element.image.title %>" src="<%= process.env.CDN_BASE_URL %><%= element.image.variants.legacy.fileName %>" />
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>

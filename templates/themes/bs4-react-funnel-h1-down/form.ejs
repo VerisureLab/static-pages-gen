@@ -1,0 +1,36 @@
+<% var offerText = payload.source.currentOfferText || payload.settings.current_offer_text; %>
+<% var offerPrice = payload.source.currentOfferPrice || payload.settings.current_offer_price %>
+<% offerText = offerText.replace('%price%', '<span>' + offerPrice.replace('%sup%', '<sup>*</sup>') + '</span>') %>
+
+<% var offerSubText = payload.source.currentOfferSubText || payload.settings.current_offer_sub_text; %>
+<% var current_promotion_end = dayjs().endOf('month').format('D MMMM') %>
+<% if (payload.source.currentPromotionEnd) {
+    current_promotion_end = dayjs(payload.source.currentPromotionEnd).format('D MMMM YYYY');
+} %>
+
+<% offerSubText = offerSubText.replace('%endofpromotion%', current_promotion_end).replaceAll('%sup%', '<sup>*</sup>') %>
+
+<div class="form-container">
+    <div class="form-wrapper contain-phone text-center">
+        <div class="form-ribbon">
+            <%- offerText %>
+            <h4><%- offerSubText %></h4>
+        </div>
+        <h2><%- i18n.t('label.lead_form.title') %></h2>
+        <h3><%- i18n.t('label.lead_form.subtitle') %></h3>
+        <a target="_blank" class="btn btn-xl btn-primary btn-block btn-sweep master-funnel-link" href="/preventivo/<%= payload.source.slugName %>/<%= payload.creativity.slugName %>/scegli"><%- i18n.t('button.calculate.text') %> <i class="fas fa-chevron-circle-right"></i></a>
+        <hr class="heavy-line"/>
+
+        <h4><%- i18n.t('label.lead_form.request_contact') %></h4>
+
+        <form name="lead" method="post">
+            <div class="form-group form-input-field">
+                <input type="tel" id="lead_phone" name="lead[phone]" required="required" class="form-control-xl form-control" maxLength="10" data-region="it" data-country="it" data-id="i18n-phone-number" placeholder="<%= i18n.t('label.lead_form.phone') %>"/>
+                <button type="submit" id="lead_save" class="btn btn-lg btn-primary"><%- i18n.t('label.lead_form.save') %></button>
+            </div>
+            <input type="hidden" id="lead_client_id" name="lead[client_id]" data-client="client-id" value=""/>
+        </form>
+        <p class="m-0"><small><%- i18n.t('label.lead_form.privacy').replace('%attributes%', 'href="#privacy-policy" data-toggle="modal" data-target="#privacy-policy"') %></small></p>
+    </div>
+</div>
+

@@ -1,0 +1,66 @@
+.cookies {
+  display: block;
+  font-size: .65em;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  z-index: 10000000000;
+}
+
+.cookies .cookies-content {
+  padding: 0 2%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cookies .cookies-text {
+  float: left;
+  text-align: left;
+  padding: 4px 0px 4px 0px;
+}
+
+.cookies .cookies-text p {
+  padding: 0 !important;
+}
+
+.cookies .cookies-buttons button {
+  border: 0;
+  color: #000;
+  padding: 4px;
+  background-color: #FFF;
+}
+
+.cookies .cookies-buttons button:before {
+  content: "Cerrar";
+}
+
+@media screen and (max-width: 479px) {
+  .cookies {
+    font-size: .65em;
+  }
+  .cookies .cookies-content {
+    position: relative;
+    overflow: hidden;
+  }
+  .cookies .cookies-text {
+    float: left;
+    text-align: left;
+    padding: 4px 30px 4px 0px;
+  }
+  .cookies .cookies-buttons button {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    cursor: pointer;
+    padding: 10px;
+
+  }
+  .cookies .cookies-buttons button:before {
+    content: "X";
+  }
+}

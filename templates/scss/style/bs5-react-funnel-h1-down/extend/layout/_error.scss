@@ -1,0 +1,141 @@
+.phone-error {
+  font-size: $f-large;
+  color: #f03;
+  font-weight: $font-strong;
+}
+
+.shadow-error {
+  -webkit-box-shadow: 0rem 2rem 3rem -1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0rem 2rem 3rem -1rem rgba(0, 0, 0, 0.15);
+}
+
+
+.header-container-error {
+  height: 100vh;
+
+  .image-hero-container {
+    position: absolute;
+    width: 100%;
+
+    img, picture {
+      height: 100vh;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: left;
+      object-position: left;
+    }
+  }
+}
+
+.h-hero-100 {
+  position: relative;
+  top: 20%;
+}
+
+
+#hero-wrap {
+  height: 98vh;
+}
+
+#hero-wrap img {
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+.center-content-hero {
+  height: 69vh;
+  align-items: center;
+}
+
+// ARROW BACK CONTENT
+
+
+@media (max-width: 1200px) {
+  .header-container-error {
+    height: 100vh;
+
+    .image-hero-container {
+      width: 100%;
+
+      img, picture {
+        height: 100vh;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: left;
+        object-position: left;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 575px) {
+  .header-container-error {
+    height: auto;
+    margin-bottom: 18em;
+    position: relative;
+  }
+  .h-hero-100 {
+    bottom: -18rem;
+    position: relative;
+    margin: 0 1em !important;
+  }
+
+  .center-content-hero {
+    height: auto;
+  }
+  .header-container-error {
+    max-height: none;
+    min-height: none;
+
+    .image-hero-container {
+      img, picture {
+        height: 50vh;
+        min-height: 310px;
+        max-height: 400px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: left;
+        object-position: left;
+      }
+    }
+  }
+}
+
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .header-container-error .image-hero-container {
+    picture {
+      height: 97vh;
+    }
+  }
+
+}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .header-container-error .image-hero-container {
+    picture {
+      height: 92vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 576px) and (max-device-width: 900px) and (orientation: landscape) {
+  .logo-header {
+    width: 67%;
+  }
+  .header-container-error .image-hero-container img {
+    height: 140vh;
+  }
+  .header-container-error {
+    height: 140vh;
+  }
+}

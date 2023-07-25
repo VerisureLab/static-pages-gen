@@ -1,0 +1,21 @@
+<footer id="footer" class="footer">
+    <div class="advice-text">
+        <div class="container">
+            <p><%- i18n.t('label.aside.text_advice').replace('%year%', new Date().getFullYear().toString()) %></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                <%- include('../../../assets/logoFooter.svg') %>
+            </div>
+
+            <div class="col-lg-10 col-md-9 col-sm-8 col-8">
+                <div class="footer-text">
+                    <p><%- i18n.t('message.footer.text').replace('%year%', new Date().getFullYear().toString()) %></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>

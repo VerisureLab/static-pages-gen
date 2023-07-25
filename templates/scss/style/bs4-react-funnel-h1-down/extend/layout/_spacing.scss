@@ -1,0 +1,57 @@
+.my-6 {
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+}
+
+.mb-6 {
+  margin-bottom: 2em;
+}
+
+.mb-6 {
+  margin-bottom: 2em;
+}
+
+.mr-10 {
+  margin-right: 10em;
+}
+
+.ml-10 {
+  margin-left: 10em;
+}
+
+.py-7 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.mb-1n {
+  margin-bottom: -.15em !important;
+}
+
+.mb-n1, .my-n1 {
+  margin-bottom: -.2rem !important;
+}
+
+@media (min-width: 1280px) {
+  .pl-md-9 {
+    padding-left: 9em !important;
+  }
+
+  .p-xl-desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pl-justify {
+    padding-left: 2.7rem;
+  }
+  .pr-justify {
+    padding-left: 2.7rem;
+  }
+  .pl-xl-justify {
+    padding-left: 11.25rem;
+  }
+  .pr-xl-justify {
+    padding-right: 11.25rem;
+  }
+}
+  

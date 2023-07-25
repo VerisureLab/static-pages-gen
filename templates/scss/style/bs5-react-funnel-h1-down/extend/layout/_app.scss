@@ -1,0 +1,78 @@
+
+.bg-gradient-corporative {
+  background: rgb(255, 0, 51);
+  background: linear-gradient(132deg, rgba(255, 0, 51, 1) 0%, rgba(255, 0, 51, 1) 18%, rgba(161, 2, 34, 1) 100%);
+}
+
+.space-module-bg {
+  padding-top: 3em;
+}
+
+.app-module {
+  ul {
+    list-style: none;
+    line-height: 3em;
+
+    li {
+      display: flex;
+      align-items: flex-end;
+
+      a {
+        text-decoration: none;
+      }
+
+      a:nth-child(2) {
+        text-decoration: underline;
+      }
+
+      i {
+        text-decoration: none;
+      }
+
+      p {
+        display: inline;
+        vertical-align: super;
+      }
+    }
+  }
+
+  h2, h3, p, a, li {
+    color: white;
+  }
+
+  img {
+    max-width: 463px;
+  }
+
+  .border-bottom:after {
+    background: #B7B7B7;
+  }
+
+  .hightlight-bg-icons {
+    background-color: white;
+    border-radius: 3em;
+    padding: .25rem;
+    display: inline;
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .app-module {
+    ul {
+      display: flex;
+      justify-content: center;
+
+    }
+  }
+}
+
+
+a {
+  cursor: pointer;
+}

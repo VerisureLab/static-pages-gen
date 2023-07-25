@@ -1,0 +1,142 @@
+.btn-xl {
+  @include button-size(0.852rem, $btn-padding-x*2, $btn-font-size-lg, $btn-border-radius-sm*1.5);
+}
+
+.form-control-xl {
+  height: 3.69rem;
+  padding: $input-padding-y-sm*2 $input-padding-x-sm*2;
+  @include font-size($input-font-size-sm*2);
+  line-height: $input-line-height*2;
+  @include border-radius($input-border-radius-xl);
+}
+
+.btn-white {
+  @include button-variant($white, $white, $verisure, $verisure);
+}
+.btn-alt {
+  @include button-variant($gray-alt, $gray-alt);
+}
+
+
+@mixin is-scrolled {
+  position: fixed;
+  height: 70px;
+  background-color: transparentize($white, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  .top-logo {
+    margin-left: -15px;
+    background-color: transparent;
+    padding: 10px;
+    > span {
+      height: 48px;
+    }
+  }
+}
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin skew ($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin ($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+.bottom-border {
+  border-bottom: 3px solid $gray-200;
+}
+
+.btn-sweep {
+  outline:none;
+  position:relative;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    background-color: transparentize($white, 0.2);
+    position: absolute;
+    display: block;
+    content: ' ';
+    top: 0;
+    @include transform(skew(-45deg));
+    transform-origin: center center;
+  }
+  &:after {
+    width: 30%;
+    height: 100%;
+    animation: sweep-fx-after 10s infinite ease-in;
+  }
+  &:before {
+    width: 10%;
+    height: 100%;
+    animation: sweep-fx-before 10s infinite ease-in-out;
+  }
+}
+
+.react-icons {
+  position: relative;
+  top: -.1rem;
+}
+
+@keyframes sweep-fx-after {
+  0% {
+    left: -100%;
+    visibility: visible;
+  }
+  10% {
+    left: 100%;
+  }
+  11% {
+    left: 100%;
+    visibility: hidden;
+  }
+  100% {
+    left: -100%;
+    visibility: hidden;
+  }
+}
+
+@keyframes sweep-fx-before {
+  0% {
+    left: -80%;
+    visibility: visible;
+  }
+  10% {
+    left: 110%;
+  }
+  11% {
+    left: 110%;
+    visibility: hidden;
+  }
+  100% {
+    left: -80%;
+    visibility: hidden;
+  }
+}
+
+.img-responsive {
+  @extend .img-fluid;
+}

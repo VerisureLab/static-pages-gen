@@ -1,0 +1,106 @@
+
+.testimonials {
+  .card {
+    height: 100%;
+  }
+}
+
+
+.carousel-control-next, .carousel-control-prev {
+  display: none;
+}
+
+.card-img-top {
+  width: 50%;
+  margin: 0 auto;
+  max-width: 100px;
+}
+
+.carousel-indicators {
+  position: relative;
+  bottom: -21px;
+  margin: 0 auto;
+  z-index: 1;
+  cursor: pointer;
+
+  li {
+    background: white;
+    opacity: 1;
+    width: 25px;
+    border-radius: 3em;
+    height: 25px;
+  }
+
+  .active {
+    background: #B9B9B9;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .carousel-control-next, .carousel-control-prev {
+    display: flex;
+    color: $corparative-color
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-indicators {
+    display: none;
+  }
+
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+  }
+}

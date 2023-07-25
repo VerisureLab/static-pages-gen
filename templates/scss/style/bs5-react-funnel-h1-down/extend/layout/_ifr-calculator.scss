@@ -1,0 +1,87 @@
+.min-height-ifr {
+  min-height: 580px;
+}
+
+.box-ifr-offer {
+  height: 100%;
+  border-radius: 0 0 3em 0;
+  -webkit-border-radius: 0 0 3em 0;
+  -moz-border-radius: 0 0 3em 0;
+  -ms-border-radius: 0 0 3em 0;
+  -o-border-radius: 0 0 3em 0;
+  // background-color: #f7f7f7;
+  text-align: center;
+
+  .icon-ico-arrows {
+    color: $extended-color;
+  }
+
+  .text-header-offer {
+    line-height: 1.2em;
+    font-size: 1.1em;
+  }
+
+  .text-number-offer {
+    font-weight: 500;
+    color: $extended-color;
+    line-height: 2.4em;
+  }
+
+  .text-legal-offer {
+    font-size: 0.6rem;
+    line-height: 1rem;
+
+    .discount {
+      font-size: 2rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+
+    i {
+      color: $extended-color;
+      position: relative;
+      font-size: 1.4em;
+      top: 0.1em;
+      left: 0.3em;
+    }
+  }
+
+  .date {
+    color: #ab192d;
+  }
+
+  .date-box {
+    line-height: 1.4em;
+    margin: .6em 0;
+    display: grid;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .min-height-ifr {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 990px) {
+  .box-ifr-offer .date-box {
+
+    display: inline;
+
+  }
+  .min-height-ifr {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+  .min-height-ifr {
+    min-height: 720px;
+  }
+}

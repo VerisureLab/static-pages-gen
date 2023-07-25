@@ -1,0 +1,131 @@
+
+.text-image-videohero {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: none;
+}
+
+.header-container {
+  height: 100vh;
+
+  .image-hero-container {
+    position: absolute;
+    width: 100%;
+
+    img, picture {
+      height: 100vh;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+    }
+  }
+}
+
+.h-hero-100 {
+  position: relative;
+  top: 20%;
+}
+
+
+#hero-wrap {
+  height: 98vh;
+}
+
+#hero-wrap img {
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+.center-content-hero {
+  height: 69vh;
+  align-items: center;
+}
+
+// ARROW BACK CONTENT
+
+
+
+@media (max-width: 1200px) {
+  .header-container {
+    height: 100vh;
+
+    .image-hero-container {
+      width: 100%;
+
+      img, picture {
+        height: 100vh;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 575px) {
+  .header-container {
+    height: auto;
+    margin-bottom: 18em;
+    position: relative;
+  }
+  .h-hero-100 {
+    bottom: -18rem;
+    position: relative;
+    margin: 0 1em !important;
+  }
+
+  .center-content-hero {
+    height: auto;
+  }
+  .header-container {
+    max-height: none;
+    min-height: none;
+
+    .image-hero-container {
+      img, picture {
+        height: 50vh;
+        min-height: 310px;
+        max-height: 400px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: top;
+        object-position: top;
+      }
+    }
+  }
+}
+
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .header-container .image-hero-container {
+    img, picture {
+      height: 97vh;
+    }
+  }
+
+}
+
+/* Landscape */
+
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .header-container .image-hero-container {
+    img, picture {
+      height: 92vh;
+    }
+  }
+
+}

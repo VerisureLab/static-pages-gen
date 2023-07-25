@@ -1,0 +1,14 @@
+# package directories
+node_modules
+
+data
+package
+dist
+
+# Serverless directories
+.serverless
+.env
+offline.yml
+projects.sh
+
+.sass-cache

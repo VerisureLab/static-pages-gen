@@ -1,0 +1,17 @@
+<% payload.elements.map( element => {
+    if (element.layout === 1) {
+        %><%- include('html/image-left.ejs', {element: element}) %><%
+    }
+    if (element.layout === 2) {
+        %><%- include('html/image-right.ejs', {element: element}) %><%
+    }
+    if (element.layout === 3) {
+        %><%- include('html/image-center.ejs', {element: element}) %><%
+    }
+    if (element.layout === 4) {
+        %><%- include('html/call-to-action.ejs', {element: element, settings: payload.settings}) %><%
+    }
+    if (element.layout === 5) {
+        %><%- include('html/custom.ejs', {element: element}) %><%
+    }
+}) %>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://127.0.0.1:5500/lp/landing-refactoring/business-cards.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Verisure</title>
+    <link href="./Verisure_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="css/main.css"></noscript>
+    <style type="text/css">
+        :root {
+            --blue: #007bff;
+            --indigo: #6610f2;
+            --purple: #6f42c1;
+            --pink: #e83e8c;
+            --red: #dc3545;
+            --orange: #fd7e14;
+            --yellow: #ffc107;
+            --green: #28a745;
+            --teal: #20c997;
+            --cyan: #17a2b8;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --info: #17a2b8;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        article,
+        aside,
+        dialog,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: .5rem
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none
+        }
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: .5rem;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.2;
+            color: inherit
+        }
+
+        .h2,
+        h2 {
+            font-size: 2rem
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto
+        }
+
+        body {
+            font-family: "Fira Sans", Helvetica, sans-serif;
+            font-weight: 300;
+            line-height: 1.8rem;
+            color: #262626;
+            font-size: 16px
+        }
+
+        body h1,
+        body h2,
+        body h3,
+        body h4 {
+            color: #262626;
+            font-size: 1.7em;
+            font-weight: 400;
+            line-height: 1.4rem
+        }
+
+        body {
+            background-color: #dfdfdf !important
+        }
+
+        .wrapper-lp {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            background-color: #fff
+        }
+
+        .wrapper-lp .justify-module {
+            max-width: 1280px;
+            margin: 0 auto
+        }
+
+        header {
+            border-bottom: .22em solid #f03
+        }
+
+        header p {
+            margin-bottom: 0
+        }
+
+        header .text-header {
+            line-height: 1.5em
+        }
+
+        header .legal-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: .6em;
+            background: #f5f5f5;
+            max-width: 18em;
+            max-height: 6em
+        }
+
+        header .legal-container .icon-legal-desktop {
+            width: 4em;
+            -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center
+        }
+
+        header .legal-container .icon-legal-desktop img {
+            width: 4em
+        }
+
+        header .legal-container .text-legal {
+            width: 66%;
+            margin: 0 0 0 1em
+        }
+
+        header .legal-container .text-legal p {
+            font-size: .8em;
+            line-height: 1.5em
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        article,
+        aside,
+        footer,
+        header,
+        nav,
+        section {
+            display: block
+        }
+
+        img {
+            border-style: none
+        }
+    </style>
+    <link rel="stylesheet" href="./Verisure_files/main.css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+
+
+</head>
+
+<body>
+    <div class="wrapper-lp">
+
+        <br>
+
+        <div class="justify-module space-module my-5">
+
+
+            <!-- Section: Block Content -->
+            <section class="dark-grey-text text-center">
+
+                <h3 class="text-center  mb-4 pb-2">Wählen Sie eine maßgeschneiderte Lösung für Ihr Unternehmen</h3>
+                <p class="text-center text-muted  mx-auto mb-4">Das Alarmsystem von Verisure ist viel mehr als nur eine
+                    Alarmanlage: Es überwacht und sichert Ihr Unternehmen mit fortschrittlichsten Technologien und den
+                    besten Sicherheitsdiensten. Entdecken Sie, warum wir das meist empfohlene Alarmunternehmen sind:</p>
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-4">
+
+                        <!-- Card Top Right -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class=" card card-image img-form">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="text-white  position-relative text-center d-flex align-items-center rgba-black-strong py-5 px-4 px-md-5 rounded z-index-1">
+                                <div>
+
+                                    <i class="icon-operator ico-6x"></i>
+
+
+                                    <h3 class="py-3 text-white">
+                                        <strong>Die größte Alarm-Leitstelle in Europa </strong>
+                                    </h3>
+                                    <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                                        fugiat,
+                                        laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error
+                                        nisi architecto
+                                        nulla ipsum dignissimos. Odit sed qui, dolorum!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                    <picture>
+
+                                            <!-- desktop -->
+                                            <source media="(min-width: 768px)" loading="lazy" type="image/webp" srcset="img/business/inhibition.webp">                                                          
+                
+                                            <img loading="lazy" src="./Verisure_files/undefined" class="rounded-md-circle lazyload w-100" alt="This cat is all business">
+                                        </picture>
+                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-4">
+
+                        <!-- Card Top Right -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class=" card card-image img-form">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-image">
+                            <div class="text-white  text-center d-flex align-items-center rgba-black-strong py-5 px-4 px-md-5 rounded">
+                                <div>
+
+                                    <i class="icon-operator ico-6x"></i>
+
+
+                                    <h3 class="py-3 text-white">
+                                        <strong>Die größte Alarm-Leitstelle in Europa </strong>
+                                    </h3>
+                                    <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                                        fugiat,
+                                        laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error
+                                        nisi architecto
+                                        nulla ipsum dignissimos. Odit sed qui, dolorum!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-4">
+
+                        <!-- Card Top Right -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class=" card card-image img-form">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-image">
+                            <div class="text-white  text-center d-flex align-items-center rgba-black-strong py-5 px-4 px-md-5 rounded">
+                                <div>
+
+                                    <i class="icon-operator ico-6x"></i>
+
+
+                                    <h3 class="py-3 text-white">
+                                        <strong>Die größte Alarm-Leitstelle in Europa </strong>
+                                    </h3>
+                                    <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                                        fugiat,
+                                        laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error
+                                        nisi architecto
+                                        nulla ipsum dignissimos. Odit sed qui, dolorum!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-4">
+
+                        <!-- Card Top Right -->
+                        <div class="row">
+                            <div class="col-6">
+                                <div class=" card card-image img-form">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-image">
+                            <div class="text-white  text-center d-flex align-items-center rgba-black-strong py-5 px-4 px-md-5 rounded">
+                                <div>
+
+                                    <i class="icon-operator ico-6x"></i>
+
+
+                                    <h3 class="py-3 text-white">
+                                        <strong>Die größte Alarm-Leitstelle in Europa </strong>
+                                    </h3>
+                                    <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                                        fugiat,
+                                        laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error
+                                        nisi architecto
+                                        nulla ipsum dignissimos. Odit sed qui, dolorum!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </div>
+
+        <br>
+    </div>
+    <link rel="stylesheet" href="./Verisure_files/font-awesome.min.css">
+    <script defer="" src="./Verisure_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer="" src="./Verisure_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer="" src="./Verisure_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Dynamically import the LazySizes library
+            const script = document.createElement('script');
+            script.src =
+                'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
+    </script>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

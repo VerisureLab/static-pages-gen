@@ -1,0 +1,80 @@
+$shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+.shadow {
+  box-shadow: $shadow;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .shadow-none-sm {
+    box-shadow: none;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .shadow-none-md {
+    box-shadow: none;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .shadow-none-lg {
+    box-shadow: none;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .shadow-none-xl {
+    box-shadow: none;
+  }
+}
+
+// ROUNDED
+
+$radius-border: 3em;
+
+
+.border-radius-all {
+  border-radius: $radius-border;
+  -webkit-border-radius: $radius-border;
+  -moz-border-radius: $radius-border;
+  -ms-border-radius: $radius-border;
+  -o-border-radius: $radius-border;
+}
+
+.border-radius-left-bottom {
+  border-radius: 0 0 0 $radius-border;
+  -webkit-border-radius: 0 0 0 $radius-border;
+  -moz-border-radius: 0 0 0 $radius-border;
+  -ms-border-radius: 0 0 0 $radius-border;
+  -o-border-radius: 0 0 0 $radius-border;
+}
+
+.border-radius-right-bottom {
+  border-radius: 0 0 $radius-border 0;
+  -webkit-border-radius: 0 0 $radius-border 0;
+  -moz-border-radius: 0 0 $radius-border 0;
+  -ms-border-radius: 0 0 $radius-border 0;
+  -o-border-radius: 0 0 $radius-border 0;
+}
+
+.border-radius-right-top {
+  border-radius: 0 $radius-border 0 0;
+  -webkit-border-radius: 0 $radius-border 0 0;
+  -moz-border-radius: 0 $radius-border 0 0;
+  -ms-border-radius: 0 $radius-border 0 0;
+  -o-border-radius: 0 0 0;
+}
+
+.border-radius-left-top {
+  border-radius: $radius-border 0 0 0;
+  -webkit-border-radius: $radius-border 0 0 0;
+  -moz-border-radius: $radius-border 0 0 0;
+  -ms-border-radius: $radius-border 0 0 0;
+  -o-border-radius: $radius-border 0 0 0;
+}
+

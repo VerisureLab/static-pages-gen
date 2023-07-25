@@ -1,0 +1,26 @@
+<% var contactPhone = payload.source.contactPhone || null; %>
+<% var contactPhoneMobile = payload.source.contactPhoneMobile || payload.source.contactPhone || null; %>
+
+<header id="header" class="header landing">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-md-4 col-5">
+            <div class="top-logo">
+                <span data-toggle="modal" data-target="#toplogo-info" title="<%= i18n.t('label.site.name') %>">
+                    <%- include('../../../assets/logo.svg') %>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-8 col text-end text-right">
+            <div class="contact-phone">
+                <% if (contactPhone != null) { %>
+                    <a class="header-btn-cta btn btn-outline-primary btn-lg d-none d-md-inline-block" href="tel://<%= contactPhone.replaceAll(' ', '') %>"><%- include('../../../assets/tabler.phone-call.ejs', {size: 24}) %> <%=contactPhone%></a>
+                <% } %>
+                <% if (contactPhoneMobile != null) { %>
+                    <a class="header-btn-cta btn btn-outline-primary btn-sm d-inline-block d-md-none" href="tel://<%= contactPhoneMobile.replaceAll(' ', '') %>"><%- include('../../../assets/tabler.phone-call.ejs', {size: 16}) %> <%=contactPhoneMobile%></a>
+                <% } %>
+            </div>
+        </div>
+      </div>
+    </div>
+</header>

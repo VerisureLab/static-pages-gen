@@ -1,0 +1,305 @@
+$button-color: #{$extended-color};
+// $button-color:#ab192d;
+$button-color-hover: #dc3545;
+$button-color-text: #fff;
+$button-border-color: #ab192d;
+
+
+.btn-pill {
+  border-radius: 3.125em;
+  height: 3.4em;
+  min-width: 8em;
+  background-color: $button-color;
+}
+
+.btn-link {
+  color: $button-color !important;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $button-color-hover !important;
+  }
+}
+
+a:hover {
+  color: $button-color;
+}
+
+label {
+  margin: 0;
+}
+
+.btn-verisure {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  border-radius: 3.125rem;
+  padding: 1em 0;
+  color: $button-color-text;
+  background-color: $button-color;
+  border: none;
+
+  &:hover {
+    background-color: $button-color-hover;
+    border-color: #fff;
+    color: $button-color-text;
+  }
+
+  &:focus .btn-verisure.focus {
+    box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+  }
+
+  .disabled,
+  &:disabled {
+    color: #fff;
+    background-color: $button-color-hover;
+    border-color: $button-color-hover;
+  }
+
+  i {
+    vertical-align: -2px;
+  }
+
+}
+
+.btn-verisure:not(:disabled):not(.disabled):active,
+.btn-verisure:not(:disabled):not(.disabled).active,
+.show > .btn-verisure.dropdown-toggle {
+  color: #fff;
+  background-color: #bd2130;
+  border-color: #b21f2d;
+}
+
+.btn-verisure:not(:disabled):not(.disabled):active:focus,
+.btn-verisure:not(:disabled):not(.disabled).active:focus,
+.show > .btn-danger.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+}
+
+// BUTTON RIBBON
+
+.btn-verisure-ribbon {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  color: $button-color-text;
+  background-color: $button-color;
+  border: 2px solid white;
+
+  &:hover {
+    background-color: white;
+    color: $button-color;
+
+  }
+
+  &:focus .btn-verisure-ribbon.focus {
+    box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+  }
+
+  .disabled,
+  &:disabled {
+    color: #fff;
+    background-color: $button-color-hover;
+    border-color: $button-color-hover;
+  }
+
+  i {
+    margin: 0 -.5em 0 .5em;
+  }
+
+}
+
+.btn-verisure-ribbon:not(:disabled):not(.disabled):active,
+.btn-verisure-ribbon:not(:disabled):not(.disabled).active,
+.show > .btn-verisure-ribbon.dropdown-toggle {
+  color: #fff;
+  background-color: #bd2130;
+  border-color: #b21f2d;
+}
+
+.btn-verisure-ribbon:not(:disabled):not(.disabled):active:focus,
+.btn-verisure-ribbon:not(:disabled):not(.disabled).active:focus,
+.show > .btn-danger.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+}
+
+// YOUTUBE BUTTON
+
+.m_btn_video {
+  position: relative;
+  display: inline-block;
+  width: 115px;
+  height: 75px;
+  border-radius: 15px;
+  background-color: #EF0009;
+  border: 0px solid #EF0009;
+  text-align: center;
+  font-family: "AdobeBlank", sans-serif;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 0;
+  opacity: 0.5;
+}
+
+.m_btn_video:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -18px;
+  margin-left: -13px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 36px solid #ffffff;
+  opacity: 1;
+}
+
+
+@media (max-width: 480px) {
+
+  .m_btn_video {
+    width: 84px;
+    height: 55px;
+    border-radius: 14px;
+  }
+  .m_btn_video:after {
+    margin-top: -14px;
+    margin-left: -10px;
+    border-top: 14px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 26px solid #ffffff;
+  }
+
+
+}
+
+
+// ARROW BACK
+
+.chevron {
+  margin: 0 10px;
+  display: inline-block;
+
+  .arm {
+    width: 2px;
+    height: 10px;
+    transition: all .15s linear;
+    display: inline-block;
+  }
+
+  .left {
+    background: $extended-color;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+  }
+
+  .right {
+    background: $extended-color;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+
+  &.down {
+    .left {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+    }
+
+    .right {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+    }
+  }
+}
+
+//BUTTON VERISURE OUTLINE
+.btn-verisure_outline {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-decoration: none;
+  border-radius: 3.125em;
+  padding: 1em 0;
+  color: $button-color;
+  background-color: $button-color-text;
+  border: 1px solid $button-color;
+
+  &:hover {
+    background-color: $button-color-hover;
+    border-color: #fff;
+    color: $button-color-text;
+  }
+
+  &:focus .btn-verisure.focus {
+    box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+  }
+
+  .disabled,
+  &:disabled {
+    color: #fff;
+    background-color: $button-color-hover;
+    border-color: $button-color-hover;
+  }
+
+  i {
+    vertical-align: -2px;
+    color: $button-color;
+  }
+
+}
+
+
+// BUTTONS + TABLE COMPARATIVE
+
+/* Horizontal line */
+
+// .collapsible-link::before {
+// content: '';
+// width: 14px;
+// height: 2px;
+// background: $button-color;
+// position: absolute;
+// top: calc(50% - 1px);
+// right: 1rem;
+// display: block;
+// transition: all 0.3s;
+// }
+
+/* Vertical line */
+
+// .collapsible-link::after {
+// content: '';
+// width: 2px;
+// height: 14px;
+// background: $button-color;
+// position: absolute;
+// top: calc(50% - 7px);
+// right: calc(1rem + 6px);
+// display: block;
+// transition: all 0.3s;
+// }
+
+// .collapsible-link[aria-expanded='true']::after {
+// transform: rotate(90deg) translateX(-1px);
+// }
+
+// .collapsible-link[aria-expanded='true']::before {
+// transform: rotate(180deg);
+// }

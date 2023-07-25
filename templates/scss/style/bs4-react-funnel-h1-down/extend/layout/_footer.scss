@@ -1,0 +1,32 @@
+.modal-dialog {
+  height: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  .modal-content {
+    height: 60%;
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: scroll !important;
+
+    .text-popup {
+      font-size: 0.8em !important;
+      line-height: 1.8em !important;
+      text-align: left !important;
+    }
+  }
+}
+
+
+.modal-dialog-scrollable {
+  display: -ms-flexbox;
+  display: flex;
+  max-height: calc(100% - 1rem);
+}
+
+.cookies {
+  p {
+    line-height: 1.4em;
+    font-size: .59rem;
+  }
+}

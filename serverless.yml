@@ -1,0 +1,86 @@
+service: pages-gen
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'eu-west-1'}
+  memorySize: 512
+  timeout: 5
+  lambdaHashingVersion: 20201221
+  environment:
+    REGION: ${self:provider.region}
+    STAGE: ${self:provider.stage}
+    BUCKET_PAGE_GEN_NAME: ${file(./serverless.${self:provider.stage}.yml):bucket-pages-gen-name}
+    BUCKET_LANDING_GEN_NAME: ${file(./serverless.${self:provider.stage}.yml):bucket-landing-gen-name}
+    CDN_BASE_URL: ${file(./serverless.${self:provider.stage}.yml):cdn-base-url}
+    SITE_URL: ${file(./serverless.${self:provider.stage}.yml):site-url}
+
+package:
+  exclude:
+    - data/**
+    - docker/**
+    - package.json
+    - package-lock.json
+    - README.md
+
+plugins:
+  - serverless-offline-sqs
+  - serverless-s3-local
+  - serverless-offline-dynamodb-streams
+  - serverless-offline
+
+functions:
+  utility_putPayload:
+    handler: handler/utility.putPayload
+    name: ${self:service}-utility_putPayload
+
+  s3_parsePayload:
+    name: ${self:service}-s3_parsePayload
+    handler: handler/s3.parsePayload
+    events:
+      - s3:
+          bucket: ${file(./serverless.${self:provider.stage}.yml):bucket-pages-gen-name}
+          event: s3:ObjectCreated:Put
+          existing: true
+          rules:
+            - suffix: payload.json
+
+  api:
+    handler: handler/api.handler
+    events:
+      - http:
+          method: ANY
+          path: /{proxy+}
+
+custom:
+  s3:
+    host: localhost
+    directory: /data/${self:service}/buckets
+    address: 0.0.0.0
+
+
+  dynamoStartingPosition:
+    dev: LATEST
+    stage: TRIM_HORIZON
+    production: TRIM_HORIZON
+
+  serverless-offline:
+    host: 0.0.0.0
+
+  serverless-offline-dynamodb-streams:
+    endpoint: http://dynamodb:8000
+    region: ${self:provider.region}
+    accessKeyId: root
+    secretAccessKey: root
+    skipCacheInvalidation: false
+
+  serverless-offline-sqs:
+    autoCreate: true
+    apiVersion: '2012-11-05'
+    endpoint: http://sqs:9324
+    region: ${self:provider.region}
+    accessKeyId: root
+    secretAccessKey: root
+    skipCacheInvalidation: false
+

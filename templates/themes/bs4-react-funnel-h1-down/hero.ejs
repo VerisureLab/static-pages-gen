@@ -1,0 +1,46 @@
+<div class="hero" id="hero">
+    <div id="featured-slider-desktop" class="carousel slide carousel-fade d-none d-md-block" data-bs-ride="carousel" data-bs-interval="7000">
+        <% payload.creativity.media.map((media, index) => { %>
+            <div class="carousel-item<%= index === 0 ? ' active' : '' %>">
+                <div class="image-wrapper">
+                    <picture>
+                        <source type="image/webp" srcset="<%= process.env.CDN_BASE_URL %><%- media.variants.web.fileName %>">
+                        <source srcset="<%= process.env.CDN_BASE_URL %><%- media.variants.legacy.fileName %>">
+
+                        <img class="lazy" loading="lazy" data-src="<%= process.env.CDN_BASE_URL %><%- media.variants.legacy.fileName %>" alt="<%= media.title %>">
+                    </picture>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+    <div id="featured-slider-mobile" class="carousel slide carousel-fade d-block d-md-none" data-bs-ride="carousel" data-bs-interval="7000">
+        <% payload.creativity.mediaMobile.map((media, index) => { %>
+            <div class="carousel-item<%= index === 0 ? ' active' : '' %>">
+                <div class="image-wrapper">
+                    <picture>
+                        <source type="image/webp" srcset="<%= process.env.CDN_BASE_URL %><%- media.variants.web.fileName %>">
+                        <source srcset="<%= process.env.CDN_BASE_URL %><%- media.variants.legacy.fileName %>">
+
+                        <img class="lazy" loading="lazy" data-src="<%= process.env.CDN_BASE_URL %><%- media.variants.legacy.fileName %>" alt="<%= media.title %>">
+                    </picture>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+
+    <div class="hero-body">
+        <div class="container d-lg-flex justify-content-between align-items-end">
+            <div class="main-form order-2">
+                <%- include('form.ejs', {payload: payload}) %>
+            </div>
+
+            <div class="text-column order-1">
+                <div class="main-text">
+                    <h1 class="subtitle d-block d-md-none"><%- payload.creativity.mainText %></h1>
+                    <h1 class="subtitle d-none d-md-block"><%- payload.creativity.mainTextMobile || payload.creativity.mainText %></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
